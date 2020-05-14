@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/gV3KaCN.png"></p>
 
-Iroh is inspired from [gruvbox][morhetz/gruvbox]
+Iroh is inspired from [gruvbox](morhetz/gruvbox)
 
 Iroh is a dark theme only theme supposed to look like a mix between volcanic and 
 ceramic style. It was at first made in order to fit into a DOOM-theme rice. 
