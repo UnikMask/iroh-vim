@@ -1,52 +1,52 @@
 " vim:ft=vim foldmethod=marker
-" === Ethna Colorscheme ===
+" === Iroh Colorscheme ===
 " By UnikMask <visorunik@gmail.com>
-" https://github.com/damien-vim
+" https://github.com/iroh-vim
 " Last Modified: recently
 " === === === === === === ===
 
 
 " Init spc settings: {{{"
 
-let g:colors_name='damien'
+let g:colors_name='iroh'
 " Check if user doesn't want to use special character formats
-if !exists('g:damien_use_spc')
-	let g:damien_use_spc=1
+if !exists('g:iroh_use_spc')
+	let g:iroh_use_spc=1
 else
-	let g:damien_use_spc=0
+	let g:iroh_use_spc=0
 endif
 
 " }}}
 " Palette: {{{
 
 " Set palette dictionnary
-let s:dm = {}
+let s:ro = {}
 
 " Fill dictionnary with colors
-let s:dm.bg 	=  ['#2e2b2a', 237]
-let s:dm.fg 	=  ['#e9d49c', 230]
-let s:dm.dcurs  =  ['#e9d49c', 230]
+let s:ro.bg 	=  ['#2e2b2a', 237]
+let s:ro.fg 	=  ['#e9d49c', 230]
+let s:ro.dcurs  =  ['#e9d49c', 230]
 
 " Colors
-let s:dm.dam2  =  ['#899470', 130]
-let s:dm.dam10 =  ['#9eb185', 130]
-let s:dm.dam13 =  ['#e3630a', 202]
-let s:dm.dam5  =  ['#ff771d', 202]
-let s:dm.dam6  =  ['#d38007', 208]
-let s:dm.dam14 =  ['#faac09', 208]
-let s:dm.dam18 =  ['#ffb032', 208]
-let s:dm.dam0  =  ['#c22211', 232]
-let s:dm.dam3  =  ['#ca2c18', 95]
-let s:dm.dam11 =  ['#d33b24', 166]
-let s:dm.dam17 =  ['#999999', 235]
-let s:dm.dam7  =  ['#d6caab', 230]
-let s:dm.dam15 =  ['#f6efdd', 230]
-let s:dm.dam1  =  ['#403735', 242]
-let s:dm.dam9  =  ['#7d5650', 131]
-let s:dm.dam16 =  ['#8f5e51', 131]
-let s:dm.dam8  =  ['#c2604c', 179]
-let s:dm.dam4  =  ['#627400', 100]
-let s:dm.dam12 =  ['#90c523', 179]
+let s:ro.ico2  =  ['#899470', 130]
+let s:ro.ico10 =  ['#9eb185', 130]
+let s:ro.ico13 =  ['#e3630a', 202]
+let s:ro.ico5  =  ['#ff771d', 202]
+let s:ro.ico6  =  ['#d38007', 208]
+let s:ro.ico14 =  ['#faac09', 208]
+let s:ro.ico18 =  ['#ffb032', 208]
+let s:ro.ico0  =  ['#c22211', 232]
+let s:ro.ico3  =  ['#ca2c18', 95]
+let s:ro.ico11 =  ['#d33b24', 166]
+let s:ro.ico17 =  ['#999999', 235]
+let s:ro.ico7  =  ['#d6caab', 230]
+let s:ro.ico15 =  ['#f6efdd', 230]
+let s:ro.ico1  =  ['#403735', 242]
+let s:ro.ico9  =  ['#7d5650', 131]
+let s:ro.ico16 =  ['#8f5e51', 131]
+let s:ro.ico8  =  ['#c2604c', 179]
+let s:ro.ico4  =  ['#627400', 100]
+let s:ro.ico12 =  ['#90c523', 179]
 
 " }}}
 " Set-Up: {{{
@@ -54,41 +54,41 @@ let s:dm.dam12 =  ['#90c523', 179]
 " Assign all elements their attribute colors.
 
 " Background and foreground colors
-let s:bg = s:dm.bg
-let s:fg = s:dm.fg
+let s:bg = s:ro.bg
+let s:fg = s:ro.fg
 
-" Shades of orange-yellow -- fiery gold
-let s:fire0 = s:dm.dam13
-let s:fire1 = s:dm.dam5
-let s:fire2 = s:dm.dam6
-let s:fire3 = s:dm.dam14
-let s:fire4 = s:dm.dam18
+" Shades of orange-yellow - Antimony
+let s:mony0 = s:ro.ico13
+let s:mony1 = s:ro.ico5
+let s:mony2 = s:ro.ico6
+let s:mony3 = s:ro.ico14
+let s:mony4 = s:ro.ico18
 
-" Shades of decrepit green - roots
-let s:roo0 = s:dm.dam2
-let s:roo1 = s:dm.dam10
+" Shades of weaker green - Cobalts
+let s:coba0 = s:ro.ico2
+let s:coba1 = s:ro.ico10
 
-" Shades of red -- bright wine
-let s:wine0 = s:dm.dam0
-let s:wine1 = s:dm.dam3
-let s:wine2 = s:dm.dam11
+" Shades of red - Iron glaze
+let s:iron0 = s:ro.ico0
+let s:iron1 = s:ro.ico3
+let s:iron2 = s:ro.ico11
 
-" Shades of beige - bone
-let s:bone0 = s:dm.dam7
-let s:bone1 = s:dm.dam15
+" Shades of beige - Brush
+let s:brush0 = s:ro.ico7
+let s:brush1 = s:ro.ico15
 
-" Shades of grey - metal
-let s:metl0 = s:dm.dam17
+" Shades of grey - Silver
+let s:silv0 = s:ro.ico17
 
-" Shades of red-grey - dust
-let s:dust0 = s:dm.dam1
-let s:dust1 = s:dm.dam9
-let s:dust2 = s:dm.dam16
-let s:dust3 = s:dm.dam8
+" Shades of red-grey - Clay
+let s:clay0 = s:ro.ico1
+let s:clay1 = s:ro.ico9
+let s:clay2 = s:ro.ico16
+let s:clay3 = s:ro.ico8
 
-" Shades of green - Witch fire
-let s:wtch0 = s:dm.dam4
-let s:wtch1 = s:dm.dam12
+" Shades of green - Copper
+let s:copp0 = s:ro.ico4
+let s:copp1 = s:ro.ico12
 
 " Represent null color
 let s:none = ['NONE', 'NONE']
@@ -140,50 +140,50 @@ function! s:Highlight(group, fg, ...)
 	execute join(hlstr, ' ')
 endfunction
 " }}}
-" Damien Common Highlights: {{{
+" Iroh Common Highlights: {{{
 
-call s:Highlight('DamienFg', s:fg)
-call s:Highlight('DamienBg', s:none, s:bg)
+call s:Highlight('IrohFg', s:fg)
+call s:Highlight('IrohBg', s:none, s:bg)
 
-" Wine hues
-call s:Highlight('DamienWine0', s:wine0)
-call s:Highlight('DamienWine1', s:wine1)
-call s:Highlight('DamienWine2', s:wine2)
+" Iron hues
+call s:Highlight('IrohIron0', s:iron0)
+call s:Highlight('IrohIron1', s:iron1)
+call s:Highlight('IrohIron2', s:iron2)
 
-" Dust hues
-call s:Highlight('DamienDust0', s:dust0)
-call s:Highlight('DamienDust1', s:dust1)
-call s:Highlight('DamienDust2', s:dust2)
-call s:Highlight('DamienDust3', s:dust3)
+" Clay hues
+call s:Highlight('IrohClay0', s:clay0)
+call s:Highlight('IrohClay1', s:clay1)
+call s:Highlight('IrohClay2', s:clay2)
+call s:Highlight('IrohClay3', s:clay3)
 
-" Witch fire hues
-call s:Highlight('DamienWitch0', s:wtch0)
-call s:Highlight('DamienWitch1', s:wtch1)
+" Copper mony hues
+call s:Highlight('IrohCopper0', s:copp0)
+call s:Highlight('IrohCopper1', s:copp1)
 
-" Bone hues
-call s:Highlight('DamienBone0', s:bone0)
-call s:Highlight('DamienBone1', s:bone1)
+" Brush hues
+call s:Highlight('IrohBrush0', s:brush0)
+call s:Highlight('IrohBrush1', s:brush1)
 
 " Fiery golden hues
-call s:Highlight('DamienFire0', s:fire0)
-call s:Highlight('DamienFire1', s:fire1)
-call s:Highlight('DamienGold0', s:fire2)
-call s:Highlight('DamienGold1', s:fire3)
-call s:Highlight('DamienGold2', s:fire4)
+call s:Highlight('IrohAntimony0', s:mony0)
+call s:Highlight('IrohAntimony1', s:mony1)
+call s:Highlight('IrohGold0', s:mony2)
+call s:Highlight('IrohGold1', s:mony3)
+call s:Highlight('IrohGold2', s:mony4)
 
-" Rootsing hues
-call s:Highlight('DamienRoots0', s:roo0)
-call s:Highlight('DamienRoots1', s:roo1)
+" Cobalting hues
+call s:Highlight('IrohCobalt0', s:coba0)
+call s:Highlight('IrohCobalt1', s:coba1)
 
 " Metal hues
-call s:Highlight('DamienMetal0', s:metl0)
+call s:Highlight('IrohMetal0', s:silv0)
 
 " Alert boxes
-call s:Highlight('DamienErrBox', s:wine1, s:dust0, s:bold)
-call s:Highlight('DamienWarnBox', s:fire3, s:dust1, s:bold)
-call s:Highlight('DamienAlertBox', s:bg, s:dust2, s:bold)
-call s:Highlight('DamienDeathBox', s:wine2, s:wine0, s:bold)
-call s:Highlight('DamienSuccessBox', s:wtch1, s:bg, s:bold)
+call s:Highlight('IrohErrBox', s:iron1, s:clay0, s:bold)
+call s:Highlight('IrohWarnBox', s:mony3, s:clay1, s:bold)
+call s:Highlight('IrohAlertBox', s:bg, s:clay2, s:bold)
+call s:Highlight('IrohDeathBox', s:iron2, s:iron0, s:bold)
+call s:Highlight('IrohSuccessBox', s:copp1, s:bg, s:bold)
 
 " Normal highlight
 call s:Highlight('Normal', s:fg, s:bg)
@@ -197,76 +197,76 @@ call s:Highlight('Normal', s:fg, s:bg)
 set background=dark
 
 " Set cursor line and cursor column with defaults
-call s:Highlight('CursorLine', s:bg, s:dust0)
+call s:Highlight('CursorLine', s:bg, s:clay0)
 hi! link CursorColumn CursorLine
 
 " Tab page line filler, label, and inactive label
-call s:Highlight('TabLineFill', s:bone0, s:dust0)
-call s:Highlight('TabLineSel', s:wtch1, s:dust0)
+call s:Highlight('TabLineFill', s:brush0, s:clay0)
+call s:Highlight('TabLineSel', s:copp1, s:clay0)
 hi! link TabLine TabLineFill
 
 " Highlight cursor paired bracket : try here {}
-call s:Highlight('MatchParen', s:none, s:dust1, s:bold)
+call s:Highlight('MatchParen', s:none, s:clay1, s:bold)
 
 " Highlight screen columns if shown
-call s:Highlight('ColorColumn', s:none, s:dust0)
+call s:Highlight('ColorColumn', s:none, s:clay0)
 
 " Highlight concealed elements
-call s:Highlight('Conceal', s:dust2, s:bg)
+call s:Highlight('Conceal', s:clay2, s:bg)
 
 " Line number of the cursor line
-call s:Highlight('CursorLineNr', s:fire2, s:dust0)
+call s:Highlight('CursorLineNr', s:mony2, s:clay0)
 
-" Link non-text and special key to more dust2's light redish grey color.
-hi! link NonText DamienDust2
-hi! link SpecialKey DamienDust2
+" Link non-text and special key to more clay2's light redish grey color.
+hi! link NonText IrohClay2
+hi! link SpecialKey IrohClay2
 " Visual mode highlighting
 call s:Highlight('Visual', s:none, s:bg, s:inverse)
 hi! link VisualNOS Visual
 
 " Search highlights
-call s:Highlight('Search', s:wtch1, s:bg, s:inverse)
+call s:Highlight('Search', s:copp1, s:bg, s:inverse)
 
-call s:Highlight('IncSearch', s:bone1, s:bg, s:inverse)
+call s:Highlight('IncSearch', s:brush1, s:bg, s:inverse)
 
 " Underline highlight
-call s:Highlight('Underlined', s:wtch0, s:bg, s:underline)
+call s:Highlight('Underlined', s:copp0, s:bg, s:underline)
 
 " Status line vars if not overriden
-call s:Highlight('StatusLine', s:bone1, s:dust1, s:inverse)
+call s:Highlight('StatusLine', s:brush1, s:clay1, s:inverse)
 hi! link StatusLineNC StatusLine
 
 " Column separating windows
-hi! link VertSplit DamienDust1
+hi! link VertSplit IrohClay1
 
 " Wild menu completion
-call s:Highlight('WildMenu', s:fire0, s:dust1, s:bold)
+call s:Highlight('WildMenu', s:mony0, s:clay1, s:bold)
 
 " Directory & special names in listing
-hi! link Directory DamienGold0
+hi! link Directory IrohGold0
 
 " Titles for output from certain commands (:set all)
-hi! link Title DamienMetal0
+hi! link Title IrohMetal0
 
 " Err messages on command line
-hi! link ErrorMsg DamienErrBox
+hi! link ErrorMsg IrohErrBox
 " -- More -- prompt
-hi! link MoreMsg DamienSuccessBox
+hi! link MoreMsg IrohSuccessBox
 " -- Press enter prompt
-hi! link Question DamienAlertBox
+hi! link Question IrohAlertBox
 " Warning messages
-hi! link WarningMsg DamienWarnBox
+hi! link WarningMsg IrohWarnBox
 
 " }}}
 " Gutter / Sidebar: {{{ 
 " Line number on the side with :number
-hi! link LineNr DamienDust1
+hi! link LineNr IrohClay1
 
 " Sign bar
-call s:Highlight('SignColumn', s:none, s:dust0)
+call s:Highlight('SignColumn', s:none, s:clay0)
 
 " Folds line
-call s:Highlight('Folded', s:dust2, s:dust0, s:italic)
+call s:Highlight('Folded', s:clay2, s:clay0, s:italic)
 " Col where fold displayed
 hi! link FoldColumn Folded
 
@@ -283,88 +283,88 @@ hi! link lCursor Cursor
 " Syntax Highlighting: {{{
 
 " Special characters
-call s:Highlight('Special', s:fire1, s:bg, s:italic)
+call s:Highlight('Special', s:mony1, s:bg, s:italic)
 
 " Comment, todos, errors
-call s:Highlight('Comment', s:dust2, s:bg)
-call s:Highlight('Todo', s:dust3, s:bg, s:bold)
-call s:Highlight('Error', s:wine2, s:dust2, s:inverse)
+call s:Highlight('Comment', s:clay2, s:bg)
+call s:Highlight('Todo', s:clay3, s:bg, s:bold)
+call s:Highlight('Error', s:iron2, s:clay2, s:inverse)
 
 " === === General statements an structure === ===
 " Loops
-hi! link Repeat DamienWine2
+hi! link Repeat IrohIron2
 " Labels
-hi! link Label DamienWine2
+hi! link Label IrohIron2
 " Exceptions
-hi! link Exception DamienWine2
+hi! link Exception IrohIron2
 " Keywords
-hi! link Keyword DamienWine2
+hi! link Keyword IrohIron2
 " Conditional Statements
-hi! link Conditional DamienGold1
+hi! link Conditional IrohGold1
 " Operators
-hi! link Operator DamienWine2
+hi! link Operator IrohIron2
 " Statements
-hi! link Statement DamienGold2
+hi! link Statement IrohGold2
 
 " === === Variables and functions/methods === ===
 " Variables/ identifiers
-hi! link Identifier DamienFire1
+hi! link Identifier IrohAntimony1
 " Functions
-hi! link Function DamienMetal0
+hi! link Function IrohMetal0
 
 " === === Preprocessor definitions === ===
 " Preprocessor definitions
-hi! link PreProc DamienWitch0
+hi! link PreProc IrohCopper0
 " Include definitions
-hi! link Include DamienWitch0
+hi! link Include IrohCopper0
 " #define preprocessor definition
-hi! link Define DamienWitch0
+hi! link Define IrohCopper0
 " Macro preproc
-hi! link Macro DamienWitch0 
+hi! link Macro IrohCopper0 
 " Preproc conditionals
-hi! link PreCondit DamienWitch0
+hi! link PreCondit IrohCopper0
 
 " === === Constants and characters
 " Generic constants
-hi! link Constant DamienFire0
+hi! link Constant IrohAntimony0
 " Char constants
-hi! link Character DamienMetal0
+hi! link Character IrohMetal0
 " String constants
-hi! link String DamienDust3 
+hi! link String IrohClay3 
 " Boolean constants
-hi! link Boolean DamienWitch1
+hi! link Boolean IrohCopper1
 " Number Constants
-hi! link Number DamienRoots1
+hi! link Number IrohCobalt1
 " Float constants
-hi! link Float DamienRoots1
+hi! link Float IrohCobalt1
 
 " === === Generics and type definitions === ===
 " Generic types
-hi! link Type DamienFire1
+hi! link Type IrohAntimony1
 " Statics, registers, volatiles
-hi! link StorageClass DamienFire1
+hi! link StorageClass IrohAntimony1
 " Structures
-hi! link Structure DamienWitch1
+hi! link Structure IrohCopper1
 " Typedefs
-hi! link Typedef DamienGold1 
+hi! link Typedef IrohGold1 
 
 " }}}
 " Completion: {{{
 " Pop-up menu snormal look
-call s:Highlight('Pmenu', s:bone0, s:dust1)
+call s:Highlight('Pmenu', s:brush0, s:clay1)
 " Pop-up menu selected item
-call s:Highlight('PmenuSel', s:bg, s:metl0, s:bold)
+call s:Highlight('PmenuSel', s:bg, s:silv0, s:bold)
 " Pop-up menu scroll bar"
-call s:Highlight('PmenuSbar', s:none, s:dust0)
+call s:Highlight('PmenuSbar', s:none, s:clay0)
 " Pop-up menu scrollbar thumb
-call s:Highlight('PmenuThumb', s:none, s:metl0)
+call s:Highlight('PmenuThumb', s:none, s:silv0)
 " }}}
 " Diffs: {{{
 
-hi! link DiffDelete DamienErrBox
-hi! link DiffAdd DamienSuccessBox
-call s:Highlight('DiffChange', s:metl0, s:bg, s:inverse)
-call s:Highlight('DiffText', s:dust1, s:bg, s:inverse)
+hi! link DiffDelete IrohErrBox
+hi! link DiffAdd IrohSuccessBox
+call s:Highlight('DiffChange', s:silv0, s:bg, s:inverse)
+call s:Highlight('DiffText', s:clay1, s:bg, s:inverse)
 
 " }}}
 
@@ -379,53 +379,53 @@ hi! link EasyMotionShade Comment
 " }}}
 " Sneak: {{{
 
-autocmd ColorScheme damien hi! link Sneak Search
-autocmd ColorScheme damien hi! link SneakLabel Search
+autocmd ColorScheme iroh hi! link Sneak Search
+autocmd ColorScheme iroh hi! link SneakLabel Search
 
 " }}}
 " GitGutter: {{{
 
-hi! link GitGutterAdd DamienWitch1
-hi! link GitGutterChange DamienMetal0
-hi! link GitGutterDelete DamienWine1
-hi! link GitGutterChangeDelete DamienMetal0
+hi! link GitGutterAdd IrohCopper1
+hi! link GitGutterChange IrohMetal0
+hi! link GitGutterDelete IrohIron1
+hi! link GitGutterChangeDelete IrohMetal0
 
 " }}}
 " Vim Fugitive: {{{
-hi! link gitcommitSelectedFile DamienWitch1
-hi! link gitcommitDiscardedFile DamienWine1
+hi! link gitcommitSelectedFile IrohCopper1
+hi! link gitcommitDiscardedFile IrohIron1
 " }}}
 " Syntastic: {{{
-call s:Highlight('SyntasticError', s:wine1, s:none, s:undercurl)
-call s:Highlight('SyntasticWarning', s:fire3, s:none, s:undercurl)
-hi! link SyntasticErrorSign DamienGold1
-hi! link SyntasticWarningSign DamienGold1
+call s:Highlight('SyntasticError', s:iron1, s:none, s:undercurl)
+call s:Highlight('SyntasticWarning', s:mony3, s:none, s:undercurl)
+hi! link SyntasticErrorSign IrohGold1
+hi! link SyntasticWarningSign IrohGold1
 " }}}
 " NERDTree: {{{
 
-hi! link NERDTreeDir DamienWitch0
-hi! link NERDTreeDirSlash DamienRoots0
+hi! link NERDTreeDir IrohCopper0
+hi! link NERDTreeDirSlash IrohCobalt0
 
-hi! link NERDTreeOpenable DamienGold0
-hi! link NERDTreeClosable DamienGold0
+hi! link NERDTreeOpenable IrohGold0
+hi! link NERDTreeClosable IrohGold0
 
-hi! link NERDTreeFile DamienBone1
-hi! link NERDTreeExecFile DamienFire1
+hi! link NERDTreeFile IrohBrush1
+hi! link NERDTreeExecFile IrohAntimony1
 
-hi! link NERDTreeUp DamienMetal0
-hi! link NERDTreeCWD DamienWitch1
-hi! link NERDTreeHelp DamienWine2
+hi! link NERDTreeUp IrohMetal0
+hi! link NERDTreeCWD IrohCopper1
+hi! link NERDTreeHelp IrohIron2
 
-hi! link NERDTreeToggleOn DamienRoots1
-hi! link NERDTreeToggleOff DamienWine0
+hi! link NERDTreeToggleOn IrohCobalt1
+hi! link NERDTreeToggleOff IrohIron0
 
 " }}}
 " Coc Nvim: {{{
 
-hi! link CocWarningSign DamienGold1
-hi! link CocErrorSign DamienWine1
-hi! link CocInfoSign DamienRoots1
-hi! link CocHintSign DamienMetal0
+hi! link CocWarningSign IrohGold1
+hi! link CocErrorSign IrohIron1
+hi! link CocInfoSign IrohCobalt1
+hi! link CocHintSign IrohMetal0
 
 " }}}
 
@@ -438,26 +438,26 @@ hi! link cStructure Structure
 " }}}
 " Java: {{{
 
-hi! link javaAnnotation DamienRoots1
-hi! link javaDocTags DamienRoots1
-hi! link javaCommentTitle DamienMetal0
-hi! link javaParen DamienBone0
-hi! link javaParen1 DamienBone0
-hi! link javaParen2 DamienBone0
+hi! link javaAnnotation IrohCobalt1
+hi! link javaDocTags IrohCobalt1
+hi! link javaCommentTitle IrohMetal0
+hi! link javaParen IrohBrush0
+hi! link javaParen1 IrohBrush0
+hi! link javaParen2 IrohBrush0
 hi! link javaOperator Operator
-hi! link javaVarArg DamienDust2
+hi! link javaVarArg IrohClay2
 
 " }}}
 " Vim: {{{
 
-hi! link vimCommentTitle DamienMetal0
-hi! link vimNotation DamienFire1
-hi! link vimBracket DamienFire1
-hi! link vimMapModKey DamienFire1
-hi! link vimFuncSID DamienWine2
-hi! link vimSetSep DamienBone
-hi! link vimSep DamienBone1
-hi! link vimContinue DamienBone1
+hi! link vimCommentTitle IrohMetal0
+hi! link vimNotation IrohAntimony1
+hi! link vimBracket IrohAntimony1
+hi! link vimMapModKey IrohAntimony1
+hi! link vimFuncSID IrohIron2
+hi! link vimSetSep IrohBrush
+hi! link vimSep IrohBrush1
+hi! link vimContinue IrohBrush1
 
 
 " }}}
