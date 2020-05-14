@@ -7,7 +7,10 @@ ceramic style. It was at first made in order to fit into a DOOM-theme rice.
 However, by making it functional, it lost a bit of that demonic vibe.
 The source code, however, still implements more demonic names right now.
 
-Also, that means I did not make the colorscheme based on 
+Also, that means I did not make the colorscheme based on Iroh from Avatar: 
+The Last Airbender.
+I only realized his looks were pretty similar to this theme after making it.
+Originally, the theme would have been called Damien.
 
 Screenshots/ Examples
 ---------------------
