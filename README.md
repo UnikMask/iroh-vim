@@ -41,4 +41,4 @@ To-do list
 License
 -------
 
-[MIT License][]
+[MIT License](./LICENSE)
