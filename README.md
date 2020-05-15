@@ -32,14 +32,13 @@ Features
 --------
 
 * Highlighting for C, Java, and Vimscript.
-* Highlighting for plugins EasyMotion, vim-sneak, GitGutter, Syntastic, and NERDTree.
+* Highlighting for plugins EasyMotion, vim-sneak, GitGutter, Syntastic, Airline, and NERDTree.
 
 To-do list
 ----------
 
 * Fix worst looking colors.
 * Add more highlighting features
-* Make a full airline color scheme
 
 License
 -------
