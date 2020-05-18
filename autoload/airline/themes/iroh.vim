@@ -11,41 +11,41 @@
 " Assign all elements their attribute colors.
 
 " Background and foreground colors
-let s:bg = ['#2e2b2a', 237]
-let s:fg = ['#e9d49c', 230]
+let s:bg = ['#2e2b2a', 236]
+let s:fg = ['#e9d49c', 187]
 
 " Shades of orange-yellow - Antimony
-let s:mony0 = ['#e3630a', 202]
-let s:mony1 = ['#ff771d', 202]
-let s:mony2 = ['#d38007', 208]
-let s:mony3 = ['#faac09', 208]
-let s:mony4 = ['#ffb032', 208]
+let s:mony0 = ['#e3630a', 166]
+let s:mony1 = ['#ff771d', 208]
+let s:mony2 = ['#d38007', 172]
+let s:mony3 = ['#faac09', 214]
+let s:mony4 = ['#ffb032', 215]
 
 " Shades of weaker green - Cobalts
-let s:coba0 = ['#899470', 130]
-let s:coba1 = ['#9eb185', 130]
+let s:coba0 = ['#899470', 101]
+let s:coba1 = ['#9eb185', 144]
 
 " Shades of red - Iron glaze
-let s:iron0 = ['#c22211', 232]
-let s:iron1 = ['#ca2c18', 95]
+let s:iron0 = ['#c22211', 124]
+let s:iron1 = ['#ca2c18', 160]
 let s:iron2 = ['#d33b24', 166]
 
 " Shades of beige - Brush
-let s:brush0 = ['#d6caab', 230]
-let s:brush1 = ['#f6efdd', 230]
+let s:brush0 = ['#d6caab', 187]
+let s:brush1 = ['#f6efdd', 255]
 
 " Shades of grey - Silver
-let s:silv0 = ['#999999', 235]
+let s:silv0 = ['#999999', 246]
 
 " Shades of red-grey - Clay
-let s:clay0 = ['#403735', 242]
-let s:clay1 = ['#7d5650', 131]
-let s:clay2 = ['#8f5e51', 131]
-let s:clay3 = ['#c2604c', 179]
+let s:clay0 = ['#403735', 237]
+let s:clay1 = ['#7d5650', 95]
+let s:clay2 = ['#8f5e51', 95]
+let s:clay3 = ['#c2604c', 131]
 
 " Shades of green - Copper
-let s:copp0 = ['#627400', 100]
-let s:copp1 = ['#90c523', 179]
+let s:copp0 = ['#627400', 64]
+let s:copp1 = ['#90c523', 112]
 
 " Represent null color
 let s:none = ['NONE', 'NONE']

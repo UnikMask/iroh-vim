@@ -23,30 +23,30 @@ endif
 let s:ro = {}
 
 " Fill dictionnary with colors
-let s:ro.bg 	=  ['#2e2b2a', 237]
-let s:ro.fg 	=  ['#e9d49c', 230]
-let s:ro.dcurs  =  ['#e9d49c', 230]
+let s:ro.bg 	=  ['#2e2b2a', 236]
+let s:ro.fg 	=  ['#e9d49c', 187]
+let s:ro.dcurs  =  ['#e9d49c', 187]
 
 " Colors
-let s:ro.ico2  =  ['#899470', 130]
-let s:ro.ico10 =  ['#9eb185', 130]
-let s:ro.ico13 =  ['#e3630a', 202]
-let s:ro.ico5  =  ['#ff771d', 202]
-let s:ro.ico6  =  ['#d38007', 208]
-let s:ro.ico14 =  ['#faac09', 208]
-let s:ro.ico18 =  ['#ffb032', 208]
-let s:ro.ico0  =  ['#c22211', 232]
-let s:ro.ico3  =  ['#ca2c18', 95]
+let s:ro.ico2  =  ['#899470', 101]
+let s:ro.ico10 =  ['#9eb185', 144]
+let s:ro.ico13 =  ['#e3630a', 166]
+let s:ro.ico5  =  ['#ff771d', 208]
+let s:ro.ico6  =  ['#d38007', 172]
+let s:ro.ico14 =  ['#faac09', 214]
+let s:ro.ico18 =  ['#ffb032', 215]
+let s:ro.ico0  =  ['#c22211', 124]
+let s:ro.ico3  =  ['#ca2c18', 160]
 let s:ro.ico11 =  ['#d33b24', 166]
-let s:ro.ico17 =  ['#999999', 235]
-let s:ro.ico7  =  ['#d6caab', 230]
-let s:ro.ico15 =  ['#f6efdd', 230]
-let s:ro.ico1  =  ['#403735', 242]
-let s:ro.ico9  =  ['#7d5650', 131]
-let s:ro.ico16 =  ['#8f5e51', 131]
-let s:ro.ico8  =  ['#c2604c', 179]
-let s:ro.ico4  =  ['#627400', 100]
-let s:ro.ico12 =  ['#90c523', 179]
+let s:ro.ico17 =  ['#999999', 246]
+let s:ro.ico7  =  ['#d6caab', 187]
+let s:ro.ico15 =  ['#f6efdd', 255]
+let s:ro.ico1  =  ['#403735', 237]
+let s:ro.ico9  =  ['#7d5650', 95]
+let s:ro.ico16 =  ['#8f5e51', 95]
+let s:ro.ico8  =  ['#c2604c', 131]
+let s:ro.ico4  =  ['#627400', 64]
+let s:ro.ico12 =  ['#90c523', 112]
 
 " }}}
 " Set-Up: {{{
@@ -304,7 +304,7 @@ hi! link Conditional IrohGold1
 " Operators
 hi! link Operator IrohIron2
 " Statements
-hi! link Statement IrohGold2
+call s:Highlight('Statement', s:mony4, s:bg, s:bold)
 
 " === === Variables and functions/methods === ===
 " Variables/ identifiers
