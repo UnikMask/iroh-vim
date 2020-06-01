@@ -7,7 +7,8 @@
 
 
 " Init spc settings: {{{"
-let g:colors_name='iroh'
+
+let g:colors_name='iroh-light'
 
 " }}}
 " Palette: {{{
@@ -16,30 +17,30 @@ let g:colors_name='iroh'
 let s:ro = {}
 
 " Fill dictionnary with colors
-let s:ro.bg 	=  ['#2e2b2a', 236]
-let s:ro.fg 	=  ['#e9d49c', 187]
-let s:ro.dcurs  =  ['#e9d49c', 187]
+let s:ro.bg 	=  ['#e9d49c', 187]
+let s:ro.fg 	=  ['#7e504a', 95]
+let s:ro.dcurs  =  ['#7e504a', 95]
 
 " Colors
-let s:ro.ico2  =  ['#899470', 101]
-let s:ro.ico10 =  ['#9eb185', 144]
-let s:ro.ico13 =  ['#e3630a', 166]
-let s:ro.ico5  =  ['#ff771d', 208]
-let s:ro.ico6  =  ['#d38007', 172]
+let s:ro.ico2  =  ['#708994', 66]
+let s:ro.ico10 =  ['#859eb1', 109]
+let s:ro.ico5  =  ['#e3630a', 166]
+let s:ro.ico13 =  ['#ff771d', 208]
+let s:ro.ico18 =  ['#d38007', 172]
 let s:ro.ico14 =  ['#faac09', 214]
-let s:ro.ico18 =  ['#ffb032', 215]
-let s:ro.ico0  =  ['#c22211', 124]
+let s:ro.ico6  =  ['#ffb032', 215]
+let s:ro.ico11 =  ['#c22211', 124]
 let s:ro.ico3  =  ['#ca2c18', 160]
-let s:ro.ico11 =  ['#d33b24', 166]
-let s:ro.ico17 =  ['#999999', 246]
-let s:ro.ico7  =  ['#d6caab', 187]
-let s:ro.ico15 =  ['#f6efdd', 255]
-let s:ro.ico1  =  ['#403735', 237]
-let s:ro.ico9  =  ['#7d5650', 95]
-let s:ro.ico16 =  ['#8f5e51', 95]
-let s:ro.ico8  =  ['#c2604c', 131]
-let s:ro.ico4  =  ['#627400', 64]
-let s:ro.ico12 =  ['#90c523', 112]
+let s:ro.ico0  =  ['#d33b24', 166]
+let s:ro.ico17 =  ['#888888', 246]
+let s:ro.ico7  =  ['#816459', 95]
+let s:ro.ico15 =  ['#6b504a', 95]
+let s:ro.ico1  =  ['#c6caab', 187]
+let s:ro.ico9  =  ['#c7b78e', 180]
+let s:ro.ico16 =  ['#bfa76a', 143]
+let s:ro.ico8  =  ['#b59952', 137]
+let s:ro.ico12 =  ['#006274', 24]
+let s:ro.ico4  =  ['#2385c5', 32]
 
 " }}}
 " Set-Up: {{{
@@ -279,8 +280,8 @@ hi! link lCursor Cursor
 call s:Highlight('Special', s:mony1, s:bg, s:italic)
 
 " Comment, todos, errors
-call s:Highlight('Comment', s:clay2, s:bg, s:italic)
-call s:Highlight('Todo', s:clay3, s:bg, s:bold, s:italic)
+call s:Highlight('Comment', s:clay2, s:bg)
+call s:Highlight('Todo', s:clay3, s:bg, s:bold)
 call s:Highlight('Error', s:iron2, s:clay2, s:inverse)
 
 " === === General statements an structure === ===
@@ -413,7 +414,8 @@ hi! link NERDTreeToggleOn IrohCobalt1
 hi! link NERDTreeToggleOff IrohIron0
 
 " }}}
-" Coc Nvim: {{{ 
+" Coc Nvim: {{{
+
 hi! link CocWarningSign IrohGold1
 hi! link CocErrorSign IrohIron1
 hi! link CocInfoSign IrohCobalt1
