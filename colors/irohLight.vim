@@ -22,8 +22,8 @@ let s:ro.fg 	=  ['#7e504a', 95]
 let s:ro.dcurs  =  ['#7e504a', 95]
 
 " Colors
-let s:ro.ico2  =  ['#708994', 66]
-let s:ro.ico10 =  ['#859eb1', 109]
+let s:ro.ico2  =  ['#708894', 66]
+let s:ro.ico10 =  ['#85aeb1', 109]
 let s:ro.ico5  =  ['#e3630a', 166]
 let s:ro.ico13 =  ['#ff771d', 208]
 let s:ro.ico18 =  ['#d38007', 172]
@@ -39,8 +39,8 @@ let s:ro.ico1  =  ['#c6caab', 187]
 let s:ro.ico9  =  ['#c7b78e', 180]
 let s:ro.ico16 =  ['#bfa76a', 143]
 let s:ro.ico8  =  ['#b59952', 137]
-let s:ro.ico12 =  ['#006274', 24]
-let s:ro.ico4  =  ['#2385c5', 32]
+let s:ro.ico12 =  ['#006174', 24]
+let s:ro.ico4  =  ['#0077a5', 32]
 
 " }}}
 " Set-Up: {{{

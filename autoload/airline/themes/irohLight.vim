@@ -22,8 +22,8 @@ let s:mony3 = ['#faac09', 214]
 let s:mony2 = ['#ffb032', 215]
 
 " Shades of weaker green - Cobalts
-let s:coba1 = ['#708994', 66]
-let s:coba0 = ['#859eb1', 109]
+let s:coba1 = ['#708894', 66]
+let s:coba0 = ['#85aeb1', 109]
 
 " Shades of red - Iron glaze
 let s:iron2 = ['#c22211', 124]
@@ -44,8 +44,8 @@ let s:clay2 = ['#bfa76a', 143]
 let s:clay3 = ['#b59952', 137]
 
 " Shades of green - Copper
-let s:copp0 = ['#2385c5', 24]
-let s:copp1 = ['#006274', 32]
+let s:copp0 = ['#0077a5', 24]
+let s:copp1 = ['#006174', 32]
 
 " Represent null color
 let s:none = ['NONE', 'NONE']
