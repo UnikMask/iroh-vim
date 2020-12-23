@@ -189,8 +189,8 @@ call s:Highlight('CursorLine', s:bg, s:clay0)
 hi! link CursorColumn CursorLine
 
 " Tab page line filler, label, and inactive label
-call s:Highlight('TabLineFill', s:brush0, s:clay0)
-call s:Highlight('TabLineSel', s:copp1, s:clay0)
+call s:Highlight('TabLineFill', s:brush0, s:clay0, s:inverse)
+call s:Highlight('TabLineSel', s:copp1, s:clay0, s:inverse)
 hi! link TabLine TabLineFill
 
 " Highlight cursor paired bracket : try here {}
@@ -221,8 +221,8 @@ call s:Highlight('IncSearch', s:brush1, s:bg, s:inverse)
 call s:Highlight('Underlined', s:copp0, s:bg, s:underline)
 
 " Status line vars if not overriden
-call s:Highlight('StatusLine', s:brush1, s:clay1, s:inverse)
-hi! link StatusLineNC StatusLine
+call s:Highlight('StatusLine', s:brush1, s:clay1)
+call s:Highlight('StatuslineNC', s:brush1, s:clay3)
 
 " Column separating windows
 hi! link VertSplit IrohClay1

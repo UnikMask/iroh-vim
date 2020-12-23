@@ -222,8 +222,8 @@ call s:Highlight('IncSearch', s:brush1, s:bg, s:inverse)
 call s:Highlight('Underlined', s:copp0, s:bg, s:underline)
 
 " Status line vars if not overriden
-call s:Highlight('StatusLine', s:brush1, s:clay1, s:inverse)
-hi! link StatusLineNC StatusLine
+call s:Highlight('StatusLine', s:brush1, s:clay1)
+call s:Highlight('StatusLineNC', s:brush1, s:clay3)
 
 " Column separating windows
 hi! link VertSplit IrohClay1
