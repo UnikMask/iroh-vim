@@ -17,6 +17,8 @@ let s:ro = {}
 
 " Fill dictionnary with colors
 let s:ro.bg 	=  ['#2e2b2a', 236]
+let s:ro.bg_alt =   ['#2a2625', 235]
+let s:ro.bg_dark = ['#282221', 232]
 let s:ro.fg 	=  ['#e9d49c', 187]
 let s:ro.dcurs  =  ['#e9d49c', 187]
 
@@ -48,6 +50,8 @@ let s:ro.ico12 =  ['#90c523', 112]
 
 " Background and foreground colors
 let s:bg = s:ro.bg
+let s:bg_alt = s:ro.bg_alt
+let s:bg_dark = s:ro.bg_dark
 let s:fg = s:ro.fg
 
 " Shades of orange-yellow - Antimony
@@ -189,9 +193,9 @@ call s:Highlight('CursorLine', s:bg, s:clay0)
 hi! link CursorColumn CursorLine
 
 " Tab page line filler, label, and inactive label
-call s:Highlight('TabLineFill', s:brush0, s:clay0, s:inverse)
-call s:Highlight('TabLineSel', s:copp1, s:clay0, s:inverse)
-hi! link TabLine TabLineFill
+call s:Highlight('TabLineFill', s:clay0, s:bg_dark, s:inverse)
+call s:Highlight('TabLineSel', s:brush0, s:bg, s:inverse)
+call s:Highlight('TabLine', s:clay0, s:bg_alt, s:inverse)
 
 " Highlight cursor paired bracket : try here {}
 call s:Highlight('MatchParen', s:none, s:clay1, s:bold)
@@ -221,8 +225,8 @@ call s:Highlight('IncSearch', s:brush1, s:bg, s:inverse)
 call s:Highlight('Underlined', s:copp0, s:bg, s:underline)
 
 " Status line vars if not overriden
-call s:Highlight('StatusLine', s:brush1, s:clay1)
-call s:Highlight('StatuslineNC', s:brush1, s:clay3)
+call s:Highlight('StatusLine', s:bg, s:bg)
+" call s:Highlight('StatuslineNC', s:bg, s:clay0)
 
 " Column separating windows
 hi! link VertSplit IrohClay1
@@ -414,6 +418,17 @@ hi! link CocErrorSign IrohIron1
 hi! link CocInfoSign IrohCobalt1
 hi! link CocHintSign IrohMetal0
 
+" }}}
+" Neovim-Dashboard: {{{
+hi! link DashboardHeader IrohClay1
+hi! link DashboardFooter IrohClay1
+hi! link DashboardDesc IrohIron2
+hi! link DashboardIcon DashboardDesc
+hi! link DashboardKey IrohAntimony1
+hi! link DashboardShotCut IrohAntimony1
+
+" }}}
+" barbar.nvim: {{{
 " }}}
 
 " === === Filetype specific highlighting === ===
