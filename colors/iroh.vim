@@ -385,8 +385,32 @@ hi! link GitGutterChangeDelete IrohCobalt1
 
 " }}}
 " Vim Fugitive: {{{
-hi! link gitcommitSelectedFile IrohCopper1
-hi! link gitcommitDiscardedFile IrohIron1
+" Normal fugitive items
+hi! link fugitiveHeader Normal
+hi! link fugitiveHeading Normal
+hi! link fugitiveHelpHeader Normal
+hi! link fugitiveHelpTag IrohIron2
+
+" Highlighted fugitive items
+call s:Highlight('fugitiveMarker', s:coba1, s:none, s:bold)
+hi! link fugitiveUntrackedHeading fugitiveMarker
+hi! link fugitiveUntrackedModifier fugitiveMarker
+hi! link fugitiveUnstagedHeading fugitiveMarker
+hi! link fugitiveUnstagedModifier fugitiveMarker
+hi! link fugitiveStagedHeading  fugitiveMarker
+hi! link fugitiveStagedHeading  fugitiveMarker
+hi! link fugitiveStagedModifier  fugitiveMarker
+hi! link fugitiveCount Normal
+
+" Branches highlight
+hi! link fugitiveSymbolicRef IrohCopper1
+
+" Git commit highlights
+hi! link gitcommitFile IrohClay0
+hi! link gitcommitHeader IrohIron1
+hi! link gitcommitBranch IrohCopper1
+hi! link gitcommitSummary Normal
+hi! link gitcommitOnBranch IrohIron2
 " }}}
 " Syntastic: {{{
 call s:Highlight('SyntasticError', s:iron1, s:none, s:undercurl)
@@ -438,7 +462,15 @@ hi! link NvimTreeGitDirty IrohClay1
 hi! link NvimTreeExecFile IrohFg
 " }}}
 " Telescope: {{{
-call s:Highlight('TelescopeSelection', s:bg, s:fg)
+let s:telescope_highlight = s:clay1
+call s:Highlight('TelescopeNormal', s:fg, s:bg)
+call s:Highlight('TelescopePreviewNormal', s:fg, s:none)
+call s:Highlight('TelescopeSelection', s:none, s:bg)
+call s:Highlight('TelescopeBorder', s:telescope_highlight, s:bg, s:bold)
+call s:Highlight('TelescopePromptNormal', s:coba1, s:bg, s:bold)
+hi! link TelescopePreviewBorder TelescopeBorder
+hi! link TelescopeResultsBorder TelescopeBorder
+call s:Highlight('TelescopeTitle', s:bg, s:telescope_highlight, s:bold)
 " }}}
 
 " === === Filetype specific highlighting === ===
