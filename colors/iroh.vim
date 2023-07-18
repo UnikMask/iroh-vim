@@ -91,13 +91,14 @@ let s:copp1 = s:ro.ico12
 let s:none = ['NONE', 'NONE']
 
 " }}}
-" Emphasis Set: {{{
+" clay0Emphasis Set: {{{
 
 let s:bold = 'bold,'
 let s:italic = 'italic,'
 let s:underline = 'underline,'
 let s:undercurl = 'undercurl,'
 let s:inverse = 'inverse,'
+let s:strikethrough = 'strikethrough,'
 
 " }}}
 " Function for highlight: {{{
@@ -135,7 +136,7 @@ endfunction
 " Iroh Common Highlights: {{{
 
 call s:Highlight('IrohFg', s:fg)
-call s:Highlight('IrohBg', s:none, s:bg)
+call s:Highlight('IrohBg', s:none, s:bg_alt)
 
 " Iron hues
 call s:Highlight('IrohIron0', s:iron0)
@@ -171,14 +172,14 @@ call s:Highlight('IrohCobalt1', s:coba1)
 call s:Highlight('IrohMetal0', s:silv0)
 
 " Alert boxes
-call s:Highlight('IrohErrBox', s:iron1, s:clay0, s:bold)
-call s:Highlight('IrohWarnBox', s:mony3, s:clay1, s:bold)
-call s:Highlight('IrohAlertBox', s:bg, s:clay2, s:bold)
+call s:Highlight('IrohErrBox', s:iron1, s:none, s:bold)
+call s:Highlight('IrohWarnBox', s:mony3, s:none, s:bold)
+call s:Highlight('IrohAlertBox', s:clay2, s:none, s:bold)
 call s:Highlight('IrohDeathBox', s:iron2, s:iron0, s:bold)
-call s:Highlight('IrohSuccessBox', s:copp1, s:bg, s:bold)
+call s:Highlight('IrohSuccessBox', s:copp1, s:none, s:bold)
 
 " Normal highlight
-call s:Highlight('Normal', s:fg, s:bg)
+call s:Highlight('Normal', s:fg, s:bg_alt)
 
 " }}}
 
@@ -189,7 +190,7 @@ call s:Highlight('Normal', s:fg, s:bg)
 set background=dark
 
 " Set cursor line and cursor column with defaults
-call s:Highlight('CursorLine', s:bg, s:clay0)
+call s:Highlight('CursorLine', s:clay2, s:clay0)
 hi! link CursorColumn CursorLine
 
 " Tab page line filler, label, and inactive label
@@ -235,19 +236,20 @@ hi! link VertSplit IrohClay1
 call s:Highlight('WildMenu', s:mony0, s:clay1, s:bold)
 
 " Directory & special names in listing
-hi! link Directory IrohGold0
+hi! link Directory IrohFg
 
 " Titles for output from certain commands (:set all)
 hi! link Title IrohMetal0
 
 " Err messages on command line
+hi! link Error IrohErrBox
+
+" Err messages on command line
 hi! link ErrorMsg IrohErrBox
-" -- More -- prompt
 hi! link MoreMsg IrohSuccessBox
-" -- Press enter prompt
 hi! link Question IrohAlertBox
-" Warning messages
 hi! link WarningMsg IrohWarnBox
+call s:Highlight('NvimInternalError', s:bg_dark, s:iron2, s:bold)
 
 " }}}
 " Gutter / Sidebar: {{{ 
@@ -258,7 +260,7 @@ hi! link LineNr IrohClay1
 call s:Highlight('SignColumn', s:none, s:clay0)
 
 " Folds line
-call s:Highlight('Folded', s:clay2, s:clay0, s:italic)
+call s:Highlight('Folded', s:clay2, s:bg, s:italic)
 " Col where fold displayed
 hi! link FoldColumn Folded
 
@@ -275,12 +277,13 @@ hi! link lCursor Cursor
 " Syntax Highlighting: {{{
 
 " Special characters
-call s:Highlight('Special', s:mony1, s:bg, s:italic)
+call s:Highlight('Special', s:iron2, s:none, s:italic)
+call s:Highlight('SpecialChar', s:fg, s:none, s:italic)
 
 " Comment, todos, errors
-call s:Highlight('Comment', s:clay2, s:bg, s:italic)
-call s:Highlight('Todo', s:clay3, s:bg, s:bold, s:italic)
-call s:Highlight('Error', s:iron2, s:clay2, s:inverse)
+call s:Highlight('Comment', s:clay1, s:none, s:italic)
+call s:Highlight('Todo', s:copp1, s:none, s:bold, s:italic)
+call s:Highlight('Error', s:copp1, s:none, s:inverse)
 
 " === === General statements an structure === ===
 " Loops
@@ -292,63 +295,53 @@ hi! link Exception IrohIron2
 " Keywords
 hi! link Keyword IrohIron2
 " Conditional Statements
-hi! link Conditional IrohGold1
+hi! link Conditional IrohIron2
 " Operators
 hi! link Operator IrohIron2
 " Statements
-call s:Highlight('Statement', s:mony4, s:bg, s:bold)
+call s:Highlight('Statement', s:iron2, s:bg, s:bold)
 
 " === === Variables and functions/methods === ===
 " Variables/ identifiers
-hi! link Identifier IrohAntimony1
+hi! link Identifier IrohFg
 " Functions
-hi! link Function IrohMetal0
+hi! link Function IrohGold1
 
 " === === Preprocessor definitions === ===
 " Preprocessor definitions
-hi! link PreProc IrohCopper0
-" Include definitions
-hi! link Include IrohCopper0
-" #define preprocessor definition
-hi! link Define IrohCopper0
-" Macro preproc
-hi! link Macro IrohCopper0 
-" Preproc conditionals
-hi! link PreCondit IrohCopper0
+hi! link PreProc IrohIron2
 
 " === === Constants and characters
 " Generic constants
 hi! link Constant IrohAntimony0
 " Char constants
-hi! link Character IrohMetal0
+hi! link Character IrohClay3
 " String constants
 hi! link String IrohClay3 
 " Boolean constants
-hi! link Boolean IrohCopper1
+hi! link Boolean IrohAntimony1
 " Number Constants
 hi! link Number IrohCobalt1
 " Float constants
 hi! link Float IrohCobalt1
+" Brackets, commas, parenthesis
+hi! link Delimiter IrohFg
 
 " === === Generics and type definitions === ===
 " Generic types
 hi! link Type IrohAntimony1
 " Statics, registers, volatiles
-hi! link StorageClass IrohAntimony1
+hi! link StorageClass IrohIron2
 " Structures
-hi! link Structure IrohCopper1
+hi! link Structure IrohIron2
 " Typedefs
-hi! link Typedef IrohGold1 
+hi! link Typedef IrohIron2 
 
 " }}}
 " Completion: {{{
-" Pop-up menu snormal look
-call s:Highlight('Pmenu', s:brush0, s:clay1)
-" Pop-up menu selected item
-call s:Highlight('PmenuSel', s:bg, s:silv0, s:bold)
-" Pop-up menu scroll bar"
-call s:Highlight('PmenuSbar', s:none, s:clay0)
-" Pop-up menu scrollbar thumb
+call s:Highlight('Pmenu', s:none, s:bg)
+call s:Highlight('PmenuSel', s:bg, s:mony3, s:bold)
+call s:Highlight('PmenuSbar', s:none, s:clay1)
 call s:Highlight('PmenuThumb', s:none, s:silv0)
 " }}}
 " Diffs: {{{
@@ -358,6 +351,14 @@ hi! link DiffAdd IrohSuccessBox
 call s:Highlight('DiffChange', s:silv0, s:bg, s:inverse)
 call s:Highlight('DiffText', s:clay1, s:bg, s:inverse)
 
+" }}}
+" Diagnostics: {{{
+hi! link DiagnosticError IrohErrBox
+hi! link DiagnosticWarn IrohWarnBox
+call s:Highlight('DiagnosticInfo', s:clay1, s:none, s:bold)
+call s:Highlight('DiagnosticHint', s:coba1, s:none, s:bold)
+call s:Highlight('DiagnosticOk', s:copp1, s:none, s:bold)
+call s:Highlight('DiagnosticDeprecated', s:clay0, s:none, s:strikethrough)
 " }}}
 
 " === === Plugin-specific themeing === ===
@@ -378,9 +379,9 @@ autocmd ColorScheme iroh hi! link SneakLabel Search
 " GitGutter: {{{
 
 hi! link GitGutterAdd IrohCopper1
-hi! link GitGutterChange IrohMetal0
+hi! link GitGutterChange IrohGold2
 hi! link GitGutterDelete IrohIron1
-hi! link GitGutterChangeDelete IrohMetal0
+hi! link GitGutterChangeDelete IrohCobalt1
 
 " }}}
 " Vim Fugitive: {{{
@@ -428,7 +429,16 @@ hi! link DashboardKey IrohAntimony1
 hi! link DashboardShotCut IrohAntimony1
 
 " }}}
-" barbar.nvim: {{{
+" Nvim-Tree: {{{
+hi! link NvimTreeFolderIcon IrohCobalt1
+hi! link NvimTreeFiIcon IrohSilver0
+hi! link NvimTreeRootFolder IrohClay3
+hi! link NvimTreeOpenedFile IrohGold2
+hi! link NvimTreeGitDirty IrohClay1
+hi! link NvimTreeExecFile IrohFg
+" }}}
+" Telescope: {{{
+call s:Highlight('TelescopeSelection', s:bg, s:fg)
 " }}}
 
 " === === Filetype specific highlighting === ===
