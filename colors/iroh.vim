@@ -455,7 +455,7 @@ hi! link DashboardShotCut IrohAntimony1
 " }}}
 " Nvim-Tree: {{{
 hi! link NvimTreeFolderIcon IrohCobalt1
-hi! link NvimTreeFiIcon IrohSilver0
+hi! link NvimTreeFiIcon IrohMetal0
 hi! link NvimTreeRootFolder IrohClay3
 hi! link NvimTreeOpenedFile IrohGold2
 hi! link NvimTreeGitDirty IrohClay1
@@ -471,6 +471,51 @@ call s:Highlight('TelescopePromptNormal', s:coba1, s:bg, s:bold)
 hi! link TelescopePreviewBorder TelescopeBorder
 hi! link TelescopeResultsBorder TelescopeBorder
 call s:Highlight('TelescopeTitle', s:bg, s:telescope_highlight, s:bold)
+" }}}
+" Neogit: {{{
+
+" Branch Colors
+hi! link NeogitBranch IrohBrush1
+call s:Highlight('NeogitRemote', s:copp1, s:none, s:bold)
+
+" Header colors
+call s:Highlight('NeogitHeader', s:coba1, s:none, s:bold)
+hi! link NeogitUntrackedfiles NeogitHeader
+hi! link NeogitUnstagedchanges NeogitHeader
+hi! link NeogitUnmergedchanges NeogitHeader
+hi! link NeogitUnpulledchanges NeogitHeader
+hi! link NeogitRecentcommits NeogitHeader
+hi! link NeogitStagedchanges NeogitHeader
+hi! link NeogitStashes NeogitHeader
+hi! link NeogitRebasing NeogitHeader
+
+" Change colors
+" TODO Find what this does - still unclear
+hi! link NeogitChangeModified IrohGold2
+hi! link NeogitChangeUpdated IrohGold2
+hi! link NeogitChangeAdded IrohCopper0
+hi! link NeogitChangeNewFile IrohCopper1
+hi! link NeogitChangeCopied IrohClay2
+hi! link NeogitChangeCopied IrohMetal0
+hi! link NeogitChangeBothModified IrohAntimony1
+hi! link NeogitChangeDeleted IrohIron2
+
+" Diff colors
+call s:Highlight('NeogitDiffDeleteHighlight', s:bg, s:iron2)
+call s:Highlight('NeogitDiffContextHighlight', s:fg, s:clay0)
+call s:Highlight('NeogitDiffAddHighlight', s:fg, s:coba0)
+call s:Highlight('NeogitHunkHeaderHighlight', s:bg, s:clay2, s:bold)
+call s:Highlight('NeogitCommitViewHeader', s:bg, s:coba1)
+
+" Popup button colors
+hi! link NeogitPopupSwitchKey CursorLine
+hi! link NeogitPopupOptionKey CursorLine
+hi! link NeogitPopupConfigKey CursorLine
+hi! link NeogitPopupActionKey CursorLine
+
+
+" Misc
+hi! link NeogitFold Folded
 " }}}
 
 " === === Filetype specific highlighting === ===
