@@ -362,8 +362,6 @@ call s:Highlight('DiagnosticDeprecated', s:clay0, s:none, s:strikethrough)
 " }}}
 
 " === === Plugin-specific themeing === ===
-" Most of those implementations are based
-" on gruvbox implementations.
 " EasyMotion: {{{
 
 hi! link EasyMotionTarget Search
@@ -454,12 +452,22 @@ hi! link DashboardShotCut IrohAntimony1
 
 " }}}
 " Nvim-Tree: {{{
+" Structure colors
 hi! link NvimTreeFolderIcon IrohCobalt1
 hi! link NvimTreeFiIcon IrohMetal0
 hi! link NvimTreeRootFolder IrohClay3
+call s:Highlight('NvimTreeWindowPicker', s:fg, s:mony2, s:bold)
+
+" File colors
 hi! link NvimTreeOpenedFile IrohGold2
-hi! link NvimTreeGitDirty IrohClay1
-hi! link NvimTreeExecFile IrohFg
+hi! link NvimTreeExecFile Normal
+hi! link NvimTreeModifiedFile IrohAntimony0
+
+" Git config
+hi! link NvimTreeGitNew IrohMetal0
+hi! link NvimTreeGitIgnored Comment
+call s:Highlight('NvimTreeGitDeleted', s:clay2, s:none, s:strikethrough)
+hi! link NvimTreeGitStaged Normal
 " }}}
 " Telescope: {{{
 let s:telescope_highlight = s:clay1
@@ -516,6 +524,21 @@ hi! link NeogitPopupActionKey CursorLine
 
 " Misc
 hi! link NeogitFold Folded
+" }}}
+" LSP: {{{
+" Java config
+hi! link @lsp.type.class.java Type
+hi! link @lsp.type.typeParameter.java Type
+hi! link @lsp.type.struct.java Type
+hi! link @lsp.type.interface.java Type
+hi! link @lsp.type.keyword.java Keyword
+hi! link @lsp.type.enum.java Type
+hi! link @lsp.type.modifier.java Keyword
+hi! link @lsp.type.namespace IrohAntimony0
+
+" }}}
+" Notify : {{{
+call s:Highlight('NotifyBackground', s:bg_alt, s:bg_alt)
 " }}}
 
 " === === Filetype specific highlighting === ===
