@@ -190,7 +190,7 @@ call s:Highlight('Normal', s:fg, s:bg_alt)
 set background=dark
 
 " Set cursor line and cursor column with defaults
-call s:Highlight('CursorLine', s:clay2, s:clay0)
+call s:Highlight('CursorLine', s:none, s:clay0)
 hi! link CursorColumn CursorLine
 
 " Tab page line filler, label, and inactive label
@@ -208,7 +208,7 @@ call s:Highlight('ColorColumn', s:none, s:clay0)
 call s:Highlight('Conceal', s:clay2, s:bg)
 
 " Line number of the cursor line
-call s:Highlight('CursorLineNr', s:mony2, s:clay0)
+call s:Highlight('CursorLineNr', s:clay3, s:clay0)
 
 " Link non-text and special key to more clay2's light redish grey color.
 hi! link NonText IrohClay2
@@ -218,9 +218,9 @@ call s:Highlight('Visual', s:none, s:bg, s:inverse)
 hi! link VisualNOS Visual
 
 " Search highlights
-call s:Highlight('Search', s:copp1, s:bg, s:inverse)
+call s:Highlight('Search', s:copp1, s:none, s:inverse)
 
-call s:Highlight('IncSearch', s:brush1, s:bg, s:inverse)
+call s:Highlight('IncSearch', s:clay2, s:none, s:inverse)
 
 " Underline highlight
 call s:Highlight('Underlined', s:copp0, s:bg, s:underline)
@@ -539,6 +539,43 @@ hi! link @lsp.type.namespace IrohAntimony0
 " }}}
 " Notify : {{{
 call s:Highlight('NotifyBackground', s:bg_alt, s:bg_alt)
+" }}}
+" DAP UI: {{{
+hi! link DAPUIScope Keyword
+hi! link DapUIType Type
+hi! link DAPUIDecoration Keyword
+call s:Highlight('DapUIModifiedValue', s:mony1, s:none, s:bold)
+hi! link DapUIThread IrohAntimony0
+hi! link DapUIStoppedThread IrohClay1
+hi! link DapUISource IrohBrush1
+hi! link DapUILineNumber IrohCobalt1
+hi! link DapUIFloatBorder IrohCobalt0
+hi! link DapUIWatchesEmpty IrohClay1
+hi! link DapUIWatchesValue IrohCobalt1
+hi! link DapUIWatchesError Error
+hi! link DapUIBreakpointsPath IrohGold1
+hi! link DapUIBreakpointsInfo IrohCobalt0
+call s:Highlight('DapUIBreakpointsCurrentLine', s:coba1, s:none, s:bold)
+call s:Highlight('DapUIWinSelect', s:mony1, s:none, s:bold)
+
+" Actions
+hi! link DapUIStepOver IrohCobalt1
+hi! link DapUIStepInto DapUIStepOver
+hi! link DapUIStepBack DapUIStepOver
+hi! link DapUIStepOut DapUIStepOver
+hi! link DAPUIStop IrohIron2
+hi! link DapUIPlayPause IrohCopper1
+hi! link DapUIRestart DapUIPlayPause
+hi! link DapUIStepOverNC DapUIStepOver
+hi! link DapUIStepIntoNC DapUIStepInto
+hi! link DapUIStepBackNC DapUIStepBack
+hi! link DapUIStepOutNC DapUIStepOut
+hi! link DAPUIStopNC DapUIStop
+hi! link DapUIRestartNC DapUIRestart
+hi! link DapUIPlayPauseNC DapUIPlayPause
+
+
+
 " }}}
 
 " === === Filetype specific highlighting === ===
