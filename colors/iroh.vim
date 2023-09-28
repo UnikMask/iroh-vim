@@ -257,7 +257,7 @@ call s:Highlight('NvimInternalError', s:bg_dark, s:iron2, s:bold)
 hi! link LineNr IrohClay1
 
 " Sign bar
-call s:Highlight('SignColumn', s:none, s:clay0)
+call s:Highlight('SignColumn', s:none, s:none)
 
 " Folds line
 call s:Highlight('Folded', s:clay2, s:bg, s:italic)
