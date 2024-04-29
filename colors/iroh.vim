@@ -25,21 +25,25 @@ let s:ro.dcurs  =  ['#e9d49c', 187]
 " Colors
 let s:ro.ico2  =  ['#899470', 101]
 let s:ro.ico10 =  ['#9eb185', 144]
+
 let s:ro.ico13 =  ['#e3630a', 166]
 let s:ro.ico5  =  ['#ff771d', 208]
 let s:ro.ico6  =  ['#d38007', 172]
 let s:ro.ico14 =  ['#faac09', 214]
 let s:ro.ico18 =  ['#ffb032', 215]
+
 let s:ro.ico0  =  ['#c22211', 124]
 let s:ro.ico3  =  ['#ca2c18', 160]
 let s:ro.ico11 =  ['#d33b24', 166]
 let s:ro.ico17 =  ['#999999', 246]
 let s:ro.ico7  =  ['#d6caab', 187]
 let s:ro.ico15 =  ['#f6efdd', 255]
+
 let s:ro.ico1  =  ['#403735', 237]
 let s:ro.ico9  =  ['#7d5650', 95]
 let s:ro.ico16 =  ['#8f5e51', 95]
 let s:ro.ico8  =  ['#c2604c', 131]
+
 let s:ro.ico4  =  ['#627400', 64]
 let s:ro.ico12 =  ['#90c523', 112]
 
