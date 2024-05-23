@@ -235,6 +235,7 @@ call s:Highlight('StatusLine', s:bg, s:bg)
 
 " Column separating windows
 hi! link VertSplit IrohClay1
+hi! link WinSeparator IrohClay1
 
 " Wild menu completion
 call s:Highlight('WildMenu', s:mony0, s:clay1, s:bold)
@@ -267,6 +268,8 @@ call s:Highlight('SignColumn', s:none, s:none)
 call s:Highlight('Folded', s:clay2, s:bg, s:italic)
 " Col where fold displayed
 hi! link FoldColumn Folded
+
+call s:Highlight('WinBar', s:fg, s:bg, s:bold)
 
 " }}}
 " Cursor: {{{
@@ -363,6 +366,10 @@ call s:Highlight('DiagnosticInfo', s:clay1, s:none, s:bold)
 call s:Highlight('DiagnosticHint', s:coba1, s:none, s:bold)
 call s:Highlight('DiagnosticOk', s:copp1, s:none, s:bold)
 call s:Highlight('DiagnosticDeprecated', s:clay0, s:none, s:strikethrough)
+" }}}
+" Floating Windows: {{{
+hi! link NormalFloat IrohFg
+hi! link FloatBorder IrohClay3
 " }}}
 
 " === === Plugin-specific themeing === ===
@@ -530,6 +537,9 @@ hi! link NeogitPopupActionKey CursorLine
 hi! link NeogitFold Folded
 " }}}
 " LSP: {{{
+" General {{{
+hi! link @variable Identifier
+" }}}
 " Java config
 hi! link @lsp.type.class.java Type
 hi! link @lsp.type.typeParameter.java Type
