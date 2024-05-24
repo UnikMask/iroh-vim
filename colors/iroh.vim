@@ -245,6 +245,7 @@ hi! link Directory IrohFg
 
 " Titles for output from certain commands (:set all)
 hi! link Title IrohMetal0
+hi! link ModeMsg IrohFg
 
 " Err messages on command line
 hi! link Error IrohErrBox
